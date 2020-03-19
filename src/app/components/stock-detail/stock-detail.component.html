@@ -1,0 +1,19 @@
+<h1>{{ selectedStock.symbol }}</h1>
+<h2>
+  Last Price: {{ selectedStock.price | currency }} at
+  {{ selectedStock.created | date: "short" }}
+</h2>
+<form>
+  <label
+    >Shares:
+    <input [(ngModel)]='buyValue' name='buyValue'/>
+  </label>
+  <button (click)='buy(buyValue)'>BUY</button>
+</form>
+<form>
+    <label>Shares:
+        <input [(ngModel)]='sellValue' name='sellValue' />
+    </label>
+    <button (click)='sell(sellValue)'>SELL</button>
+</form>
+<app-price-history [receipts]='receipts'></app-price-history>

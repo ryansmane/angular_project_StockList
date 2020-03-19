@@ -1,0 +1,6 @@
+<div>
+    <h3>Market History</h3>
+    <ul *ngIf='receipts'>
+        <li *ngFor='let receipt of receipts'>{{receipt.created | date:'short'}} | {{receipt.status}} | {{receipt.quantity}}</li>
+    </ul>
+</div>

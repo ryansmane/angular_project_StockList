@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ngSM';
+  title: string = 'ngStock';
+  links: any[] = [{ path: 'stocks', label: 'List' }, { path: 'new', label: 'Create' }]
 }
